@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cv-maisun</title>
+    <script src="https://docs.opencv.org/4.x/opencv.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #5d7375;
+            color: rgb(181, 174, 174);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .light-mode {
+            background-color: #f5f5f5;
+            color: black;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #324c507d;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .left {
+            width: 30%;
+            background: #324c50;
+            padding: 20px;
+            text-align: center;
+        }
+        .left img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .right {
+            width: 70%;
+            padding: 20px;
+            background: #698b8ebd;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            margin: 0;
+        }
+        .right-top {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .skills {
+            margin-top: 20px;
+            padding: 20px;
+            background: #567377;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            background: #4e7e83;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img id="profile-pic" src="../images/fotoprofil.jpg" alt="foto profil">
+            <button onclick="toggleTheme()">Theme</button>
+            <button onclick="applyFilter()">Apply Filter</button>
+            <h3>Contact</h3>
+            <div class="contact">
+                <p>Alamat : jln.R, soeprapto no.77b</p>
+                <p>No handphone : +623457891011</p>
+                <p>Email : maysnapr@gmail.com</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-top">
+                <h1>Maisun Mufliha Aprilia.M</h1>
+                <p>Saya adalah mahasiswa Ilmu Komputer yang memiliki minat dan keahlian dalam pengembangan web. Saya memiliki pengalaman dalam membangun aplikasi web menggunakan teknologi frontend dan backend modern. Fokus saya adalah menciptakan solusi berbasis web yang responsif, interaktif, dan efisien. </p>
+                <div class="section">
+                    <h3>Education</h3>
+                    <p>SMAN 1 KENDARI (2020 - 2023)</p>
+                    <p>Universitas Haluoleo - Ilmu komputer (2023 - sekarang)</p>
+                </div>
+                <div class="section">
+                    <h3>Proyek</h3>
+                    <p><strong>Aplikasi berbasis web pada pemesanan oleh-oleh dikendari</strong> Aplikasi dibuat agar memudahkan pelanggan dalam memesan oleh-oleh.</p>
+                    <p><strong>Sistem aplikasi basis data manajemen pemesanan pada toko restoran</strong> Memudahkan mencatat stok dan pemesanan makanan secara online pada satu tempat restoran.</p>
+                </div>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Frontend: HTML, CSS, JavaScript (React, Vue.js)</li>
+                    <li>Backend: Node.js, Express, Django, Flask</li>
+                    <li>Database: MySQL, PostgreSQL, MongoDB</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+
+        function applyFilter() {
+            let img = document.getElementById('profile-pic');
+            img.style.filter = 'grayscale(100%)'; // Apply grayscale filter
+        }
+    </script>
+</body>
+</html>
